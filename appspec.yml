@@ -4,6 +4,7 @@ files:
   - source: /target/SampleJenkinsAwsDeployApp.war
     destination: /var/lib/tomcat8/webapps
 file_exists_behavior: OVERWRITE
+<<<<<<< HEAD
 
 hooks:
   BeforeInstall:
@@ -13,3 +14,5 @@ hooks:
     - location: scripts/start_apache.sh
       timeout: 180
       runas: root
+=======
+>>>>>>> 1c78935a1f07ce11c81d81a6f1b4ff690c3556c7
