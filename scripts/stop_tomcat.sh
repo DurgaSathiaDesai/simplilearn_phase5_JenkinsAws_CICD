@@ -1,4 +1,3 @@
 #!/bin/bash
-# stoping apache
-rm -rf /var/www/html/*
+# stoping tomcat
 service tomcat8 stop
