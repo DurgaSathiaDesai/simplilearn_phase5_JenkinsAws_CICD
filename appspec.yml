@@ -3,4 +3,4 @@ os: linux
 files:
   - source: /target/SampleJenkinsAwsDeployApp.war
     destination: /var/lib/tomcat8/webapps
-    file_exists_behavior: OVERWRITE
+file_exists_behavior: OVERWRITE
