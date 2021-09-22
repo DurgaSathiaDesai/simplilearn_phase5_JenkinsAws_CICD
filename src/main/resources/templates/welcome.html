@@ -12,6 +12,17 @@
         height: 100px;
         background-color: #006666;
   }
+  
+  .column1 {
+  float: left;
+  width: 60%;
+  }
+  
+  .column2 {
+  float: left;
+  width: 40%;
+  margin-top : 30px;
+  }
 
 </style>
 </head>
@@ -20,13 +31,33 @@
 <br>
 	<h1>Welcome To CI/CD with Jenkins and AWS EC2</h1>
 </div>
-<div>
-<img th:src="@{/images/logo.png}" border="0" 
-    	 alt="LoginIcon" width="1585" height="600"/>
+<div class="column1">
+	<img th:src="@{/images/logo.png}" border="0" 
+    	 alt="LoginIcon" width="900" height="600"/>
+    	 
+    	 </div>
+    	 <div class="column2" align="center">
+    <form th:action="@{/processlogin}" method="post">
+    	<table>
+			<tr>
+				<td>UserName </td>
+				<td><input type="text" name="username" id="username" autofocus="autofocus" Maxlength=50 required></td>
+			</tr>
+			<tr>
+				<td>Password </td>
+				<td><input type="password" name="password" id="password" Maxlength=50 required></td>
+			</tr>
+		</table>
+		<br>
+		<input type="submit" id="loginbutton" value="  Login  ">
+		<p th:text="${error}" style="color: red"></p>
+	</form>
 </div>
 <div align="center">
-<h2>Congratulations !!!</h2>
-<h3>You have successfully integrated GitHub and Jenkins with AWS EC2 and deployed your SpringBoot Application</h3>
+<br>
+<br>
+ <h2>Congratulations !!!</h2>
+ <h3>You have successfully integrated GitHub and Jenkins with AWS EC2 and deployed your SpringBoot Application</h3>
 </div>
 </body>
 </html>
